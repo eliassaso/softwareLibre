@@ -4,7 +4,7 @@ class ExampleMailer < ApplicationMailer
 
   def sample_email(envio)
     @envio = envio
-    mail(:to => envio.email, :subject => 'Sample Email')
+    mail(:to => envio.email, :subject => 'Confirmation')
   end
 
 end
