@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @envio.nombre %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @envio.email %>
+</p>
+
+<%= link_to 'Edit', edit_envio_path(@envio) %> |
+<%= link_to 'Back', envios_path %>

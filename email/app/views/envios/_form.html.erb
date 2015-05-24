@@ -1,0 +1,25 @@
+<%= form_for(@envio) do |f| %>
+  <% if @envio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@envio.errors.count, "error") %> prohibited this envio from being saved:</h2>
+
+      <ul>
+      <% @envio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
